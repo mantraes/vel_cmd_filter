@@ -1,0 +1,123 @@
+16:05:33 **** Incremental Build of configuration Debug for project vel_cmd_filter ****
+make all 
+Building file: ../src/Msg_chk.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Msg_chk.d" -MT"src/Msg_chk.o" -o "src/Msg_chk.o" "../src/Msg_chk.cpp"
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from /usr/include/c++/4.8/cstdio:42,
+                 from /opt/ros/indigo/include/ros/console.h:37,
+                 from /opt/ros/indigo/include/ros/ros.h:40,
+                 from ../src/Msg_chk.cpp:11:
+../src/Msg_chk.cpp:39:42: error: conversion from ‘long int’ to non-scalar type ‘geometry_msgs::Twist_<std::allocator<void> >::ConstPtr {aka boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >}’ requested
+ geometry_msgs::Twist::ConstPtr incoming= NULL;
+                                          ^
+In file included from /opt/ros/indigo/include/ros/ros.h:40:0,
+                 from ../src/Msg_chk.cpp:11:
+../src/Msg_chk.cpp: In function ‘void chatterCallback(geometry_msgs::Twist_<std::allocator<void> >::ConstPtr&)’:
+/opt/ros/indigo/include/ros/console.h:342:176: warning: format ‘%d’ expects argument of type ‘int’, but argument 8 has type ‘geometry_msgs::Vector3_<std::allocator<void> >::_x_type {aka double}’ [-Wformat=]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+                                                                                                                                                                                ^
+/opt/ros/indigo/include/ros/console.h:345:5: note: in expansion of macro ‘ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+     ^
+/opt/ros/indigo/include/ros/console.h:375:7: note: in expansion of macro ‘ROSCONSOLE_PRINT_AT_LOCATION’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+       ^
+/opt/ros/indigo/include/ros/console.h:557:35: note: in expansion of macro ‘ROS_LOG_COND’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+                                   ^
+/opt/ros/indigo/include/rosconsole/macros_generated.h:110:23: note: in expansion of macro ‘ROS_LOG’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+                       ^
+../src/Msg_chk.cpp:43:3: note: in expansion of macro ‘ROS_INFO’
+   ROS_INFO("I heard this velocity: [%d]", velcmd->linear.x);
+   ^
+/opt/ros/indigo/include/ros/console.h:342:176: warning: format ‘%d’ expects argument of type ‘int’, but argument 8 has type ‘geometry_msgs::Vector3_<std::allocator<void> >::_z_type {aka double}’ [-Wformat=]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+                                                                                                                                                                                ^
+/opt/ros/indigo/include/ros/console.h:345:5: note: in expansion of macro ‘ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+     ^
+/opt/ros/indigo/include/ros/console.h:375:7: note: in expansion of macro ‘ROSCONSOLE_PRINT_AT_LOCATION’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+       ^
+/opt/ros/indigo/include/ros/console.h:557:35: note: in expansion of macro ‘ROS_LOG_COND’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+                                   ^
+/opt/ros/indigo/include/rosconsole/macros_generated.h:110:23: note: in expansion of macro ‘ROS_LOG’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+                       ^
+../src/Msg_chk.cpp:44:3: note: in expansion of macro ‘ROS_INFO’
+   ROS_INFO("I heard this rotation: [%d]", velcmd->angular.z);
+   ^
+In file included from /opt/ros/indigo/include/ros/serialization.h:37:0,
+                 from /opt/ros/indigo/include/ros/publisher.h:34,
+                 from /opt/ros/indigo/include/ros/node_handle.h:32,
+                 from /opt/ros/indigo/include/ros/ros.h:45,
+                 from ../src/Msg_chk.cpp:11:
+/opt/ros/indigo/include/ros/message_traits.h: In instantiation of ‘static const char* ros::message_traits::MD5Sum<M>::value() [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’:
+/opt/ros/indigo/include/ros/message_traits.h:228:103:   required from ‘const char* ros::message_traits::md5sum() [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’
+/opt/ros/indigo/include/ros/subscribe_options.h:89:50:   required from ‘void ros::SubscribeOptions::initByFullCallbackType(const string&, uint32_t, const boost::function<void(P)>&, const boost::function<boost::shared_ptr<typename ros::ParameterAdapter<P>::Message>()>&) [with P = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; std::string = std::basic_string<char>; uint32_t = unsigned int; typename ros::ParameterAdapter<P>::Message = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’
+/opt/ros/indigo/include/ros/node_handle.h:646:5:   required from ‘ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(M), const ros::TransportHints&) [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; std::string = std::basic_string<char>; uint32_t = unsigned int]’
+../src/Msg_chk.cpp:142:73:   required from here
+/opt/ros/indigo/include/ros/message_traits.h:121:29: error: ‘__s_getMD5Sum’ is not a member of ‘boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >’
+     return M::__s_getMD5Sum().c_str();
+                             ^
+/opt/ros/indigo/include/ros/message_traits.h: In instantiation of ‘static const char* ros::message_traits::DataType<M>::value() [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’:
+/opt/ros/indigo/include/ros/message_traits.h:237:105:   required from ‘const char* ros::message_traits::datatype() [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’
+/opt/ros/indigo/include/ros/subscribe_options.h:90:54:   required from ‘void ros::SubscribeOptions::initByFullCallbackType(const string&, uint32_t, const boost::function<void(P)>&, const boost::function<boost::shared_ptr<typename ros::ParameterAdapter<P>::Message>()>&) [with P = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; std::string = std::basic_string<char>; uint32_t = unsigned int; typename ros::ParameterAdapter<P>::Message = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’
+/opt/ros/indigo/include/ros/node_handle.h:646:5:   required from ‘ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(M), const ros::TransportHints&) [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; std::string = std::basic_string<char>; uint32_t = unsigned int]’
+../src/Msg_chk.cpp:142:73:   required from here
+/opt/ros/indigo/include/ros/message_traits.h:138:31: error: ‘__s_getDataType’ is not a member of ‘boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >’
+     return M::__s_getDataType().c_str();
+                               ^
+In file included from /opt/ros/indigo/include/ros/subscription_callback_helper.h:35:0,
+                 from /opt/ros/indigo/include/ros/subscriber.h:33,
+                 from /opt/ros/indigo/include/ros/node_handle.h:33,
+                 from /opt/ros/indigo/include/ros/ros.h:45,
+                 from ../src/Msg_chk.cpp:11:
+/opt/ros/indigo/include/ros/parameter_adapter.h: In instantiation of ‘static ros::ParameterAdapter<M>::Parameter ros::ParameterAdapter<M>::getParameter(const Event&) [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; ros::ParameterAdapter<M>::Parameter = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; ros::ParameterAdapter<M>::Event = ros::MessageEvent<const boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > > >; typename boost::remove_reference<typename boost::remove_const<M>::type>::type = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’:
+/opt/ros/indigo/include/ros/subscription_callback_helper.h:144:54:   required from ‘void ros::SubscriptionCallbackHelperT<P, Enabled>::call(ros::SubscriptionCallbackHelperCallParams&) [with P = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; Enabled = void]’
+../src/Msg_chk.cpp:178:1:   required from here
+/opt/ros/indigo/include/ros/parameter_adapter.h:78:30: error: invalid initialization of reference of type ‘ros::ParameterAdapter<boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&>::Parameter {aka boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&}’ from expression of type ‘const boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >’
+     return *event.getMessage();
+                              ^
+In file included from /opt/ros/indigo/include/ros/publisher.h:34:0,
+                 from /opt/ros/indigo/include/ros/node_handle.h:32,
+                 from /opt/ros/indigo/include/ros/ros.h:45,
+                 from ../src/Msg_chk.cpp:11:
+/opt/ros/indigo/include/ros/serialization.h: In instantiation of ‘static void ros::serialization::Serializer<T>::read(Stream&, typename boost::call_traits<T>::reference) [with Stream = ros::serialization::IStream; T = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >; typename boost::call_traits<T>::reference = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&]’:
+/opt/ros/indigo/include/ros/serialization.h:163:32:   required from ‘void ros::serialization::deserialize(Stream&, T&) [with T = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >; Stream = ros::serialization::IStream]’
+/opt/ros/indigo/include/ros/subscription_callback_helper.h:136:34:   required from ‘ros::VoidConstPtr ros::SubscriptionCallbackHelperT<P, Enabled>::deserialize(const ros::SubscriptionCallbackHelperDeserializeParams&) [with P = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; Enabled = void; ros::VoidConstPtr = boost::shared_ptr<const void>]’
+../src/Msg_chk.cpp:178:1:   required from here
+/opt/ros/indigo/include/ros/serialization.h:136:5: error: ‘class boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >’ has no member named ‘deserialize’
+     t.deserialize(stream.getData());
+     ^
+In file included from /opt/ros/indigo/include/ros/serialization.h:37:0,
+                 from /opt/ros/indigo/include/ros/publisher.h:34,
+                 from /opt/ros/indigo/include/ros/node_handle.h:32,
+                 from /opt/ros/indigo/include/ros/ros.h:45,
+                 from ../src/Msg_chk.cpp:11:
+/opt/ros/indigo/include/ros/message_traits.h: In static member function ‘static const char* ros::message_traits::MD5Sum<M>::value() [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’:
+/opt/ros/indigo/include/ros/message_traits.h:122:3: warning: control reaches end of non-void function [-Wreturn-type]
+   }
+   ^
+/opt/ros/indigo/include/ros/message_traits.h: In static member function ‘static const char* ros::message_traits::DataType<M>::value() [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’:
+/opt/ros/indigo/include/ros/message_traits.h:139:3: warning: control reaches end of non-void function [-Wreturn-type]
+   }
+   ^
+In file included from /opt/ros/indigo/include/ros/subscription_callback_helper.h:35:0,
+                 from /opt/ros/indigo/include/ros/subscriber.h:33,
+                 from /opt/ros/indigo/include/ros/node_handle.h:33,
+                 from /opt/ros/indigo/include/ros/ros.h:45,
+                 from ../src/Msg_chk.cpp:11:
+/opt/ros/indigo/include/ros/parameter_adapter.h: In static member function ‘static ros::ParameterAdapter<M>::Parameter ros::ParameterAdapter<M>::getParameter(const Event&) [with M = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; ros::ParameterAdapter<M>::Parameter = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >&; ros::ParameterAdapter<M>::Event = ros::MessageEvent<const boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > > >; typename boost::remove_reference<typename boost::remove_const<M>::type>::type = boost::shared_ptr<const geometry_msgs::Twist_<std::allocator<void> > >]’:
+/opt/ros/indigo/include/ros/parameter_adapter.h:79:3: warning: control reaches end of non-void function [-Wreturn-type]
+   }
+   ^
+make: *** [src/Msg_chk.o] Error 1
+
+16:05:34 Build Finished (took 1s.576ms)
+
