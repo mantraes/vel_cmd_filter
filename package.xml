@@ -2,7 +2,7 @@
 <package>
   <name>vel_cmd_filter</name>
   <version>0.0.0</version>
-  <description>The vel_cmd_filter package</description>
+  <description>The vel_cmd_filter_node package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
